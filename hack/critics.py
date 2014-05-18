@@ -20,5 +20,7 @@ def combinator(values):
 
 
 combinator(l)
+print "Sol: a1-a3"
 print "====================="
 combinator(l2)
+print "Sol: b1-b4, b2-b3"
