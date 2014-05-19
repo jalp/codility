@@ -6,6 +6,11 @@ def string_reverse(input):
 # 2) Using built-in reversed
 # return "".join(reversed(input))
 # 3) Using a generator
-    return "".join(input[i] for i in range(len(input) - 1, -1, -1))
+#    return "".join(input[i] for i in range(len(input) - 1, -1, -1))
+# 4) Using a list (mutable data):
 
+    l = list(input)
+    for i in range(len(l)/2):
+        l[i], l[len(l) -1 -i] = l[len(l) -1 -i], l[i]
+    return "".join(l)
 print string_reverse("This is amazing")
