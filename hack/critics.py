@@ -2,7 +2,7 @@ from itertools import combinations
 
 C, N = raw_input().split(" ")
 d = []
-for row in xrange(1, int(N) + 1):
+for row in range(1, int(N) + 1):
     d.append(set([int(x) for x in raw_input().split(" ")]))
 
 l = [(d.index(a) + 1, d.index(b) + 1) for a, b in combinations(d, 2) if len(a ^ b) == 1]
